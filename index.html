@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>George Ndirangu | App and web developer, Kenya</title>
+<meta name="description" content="Full stack developer in Kenya. Six live products, fixed prices from Kshs 50,000, and a technical founder option for app builds.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="George Ndirangu | App and web developer">
+<meta property="og:description" content="Six live products. Fixed prices from Kshs 50,000. Technical founder option for app builds.">
+<meta property="og:image" content="https://geozstevenzz.github.io/assets/og.jpg">
+<meta property="og:url" content="https://geozstevenzz.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ECEEE8;
+  --paper-2:#E1E4DC;
+  --ink:#121A17;
+  --ink-soft:#4B5651;
+  --cobalt:#1F3DE0;
+  --maize:#F2C230;
+  --navy:#0C1440;
+  --line:rgba(18,26,23,.14);
+  --wrap:72rem;
+  --gutter:clamp(1.25rem,4vw,3rem);
+  --chapter:clamp(6rem,14vw,12rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Geist",system-ui,sans-serif;font-size:1.0625rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+main{overflow-x:hidden;width:100%;max-width:100%}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.wrap.wide{max-width:84rem}
+.chapter{padding-block:var(--chapter)}
+
+/* nav */
+.nav{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:.25rem;padding:.4rem .4rem .4rem 1.1rem;border-radius:999px;background:rgba(236,238,232,.78);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border:1px solid var(--line);box-shadow:0 10px 30px -18px rgba(12,20,64,.45);max-width:calc(100vw - 1.5rem)}
+.nav-name{font-weight:650;letter-spacing:-.01em;text-decoration:none;margin-right:.75rem;white-space:nowrap}
+.nav a.link{text-decoration:none;font-size:.95rem;padding:.5rem .8rem;border-radius:999px;color:var(--ink-soft);white-space:nowrap;transition:background .2s,color .2s}
+.nav a.link:hover{background:var(--paper-2);color:var(--ink)}
+.nav a.cta{text-decoration:none;font-size:.95rem;font-weight:600;padding:.55rem 1.05rem;border-radius:999px;background:var(--ink);color:var(--paper);white-space:nowrap}
+@media (max-width:720px){.nav a.link{display:none}.nav{padding-left:1rem}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.95rem 1.5rem;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;transition:transform .25s ease,background .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--cobalt);color:#fff}
+.btn-primary:hover{background:#1730b8}
+.btn-quiet{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn-quiet:hover{background:var(--ink);color:var(--paper)}
+.btn-maize{background:var(--maize);color:var(--ink)}
+.btn-ghost-light{color:#fff;border:1.5px solid rgba(255,255,255,.7)}
+.btn-ghost-light:hover{background:#fff;color:var(--navy)}
+
+/* hero */
+.hero{position:relative;padding-top:clamp(8rem,16vw,12rem);padding-bottom:var(--chapter)}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:60vw;height:60vw;max-width:900px;max-height:900px;background:radial-gradient(closest-side,rgba(31,61,224,.16),rgba(242,194,48,.10) 55%,transparent 72%);filter:blur(20px);pointer-events:none}
+.hero h1{position:relative;font-size:clamp(2.3rem,4.6vw,5rem);line-height:1.04;letter-spacing:-.045em;font-weight:620;max-width:72rem}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .line > span{display:block}
+.pill{display:inline-block;width:1.9em;height:.78em;border-radius:999px;background-size:cover;background-position:left top;vertical-align:baseline;margin:0 .12em;transform:translateY(.06em);box-shadow:inset 0 0 0 1px rgba(18,26,23,.2)}
+.hero-split{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2rem,6vw,6rem);margin-top:clamp(2.5rem,5vw,4.5rem);align-items:start}
+.hero-copy p{font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.5;color:var(--ink-soft);max-width:30rem}
+.hero-copy p strong{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.fan{position:relative;aspect-ratio:16/11;margin-top:.5rem}
+.frame{position:absolute;width:74%;border-radius:14px;overflow:hidden;background:#fff;border:1px solid rgba(18,26,23,.18);box-shadow:0 30px 60px -30px rgba(12,20,64,.55)}
+.frame::before{content:"";display:block;height:22px;background:linear-gradient(#f4f5f1,#e6e8e1);border-bottom:1px solid rgba(18,26,23,.12)}
+.frame img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:left top}
+.frame.f1{left:0;top:16%;transform:rotate(-4deg);z-index:1}
+.frame.f2{right:0;top:0;transform:rotate(3deg);z-index:2}
+.frame.f3{left:14%;bottom:0;transform:rotate(-1deg);z-index:3}
+@media (max-width:860px){.hero-split{grid-template-columns:1fr}.fan{aspect-ratio:16/12}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);padding-block:1.4rem;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:3.5rem;padding-right:3.5rem;will-change:transform}
+.marquee-track span{font-size:clamp(1.6rem,3.4vw,2.9rem);font-weight:560;letter-spacing:-.035em}
+.marquee-track span:nth-child(even){color:transparent;-webkit-text-stroke:1.2px var(--ink)}
+
+/* section heads */
+.head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:2rem 4rem;align-items:end;margin-bottom:clamp(2.5rem,5vw,4.5rem)}
+.head h2{font-size:clamp(2rem,4.2vw,3.75rem);line-height:1.05;letter-spacing:-.04em;font-weight:620}
+.head p{color:var(--ink-soft);max-width:28rem}
+@media (max-width:860px){.head{grid-template-columns:1fr}}
+
+/* accordion */
+.slices{display:flex;gap:.6rem;height:min(78vh,640px)}
+.slice{position:relative;flex:1 1 0;min-width:0;border-radius:20px;overflow:hidden;cursor:pointer;background:var(--ink);color:#fff;transition:flex-grow .7s cubic-bezier(.2,.8,.2,1)}
+.slice.is-open{flex-grow:7;cursor:default}
+.slice > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;opacity:.42;filter:saturate(.75);transition:opacity .7s,transform .9s ease-out,filter .7s}
+.slice:hover > img{transform:scale(1.04)}
+.slice.is-open > img{opacity:1;filter:none;transform:none}
+.slice::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,26,23,0) 22%,rgba(18,26,23,.97) 62%);opacity:0;transition:opacity .6s}
+.slice.is-open::after{opacity:1}
+.slice-tab{position:absolute;inset:0;z-index:2;display:flex;align-items:flex-end;justify-content:center;padding-bottom:1.5rem;background:none;border:0;color:#fff;font:inherit;cursor:pointer;transition:opacity .3s}
+.slice-tab span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:1.15rem;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.slice.is-open .slice-tab{opacity:0;pointer-events:none}
+.slice-body{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:clamp(1.25rem,2.4vw,2.25rem);opacity:0;transform:translateY(14px);transition:opacity .35s,transform .5s;pointer-events:none;width:min(100%,46rem)}
+.slice.is-open .slice-body{opacity:1;transform:none;transition-delay:.25s;pointer-events:auto}
+.slice-body h3{font-size:clamp(1.6rem,2.6vw,2.4rem);letter-spacing:-.035em;line-height:1.1;font-weight:620}
+.slice-body p{margin-top:.6rem;color:rgba(255,255,255,.86);max-width:36rem}
+.built{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0 0;padding:0;list-style:none}
+.built li{font-size:.875rem;font-weight:550;padding:.3rem .7rem;border-radius:999px;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.visit{display:inline-block;margin-top:1.1rem;font-weight:600;color:var(--maize);text-underline-offset:4px}
+@media (max-width:860px){
+  .slices{flex-direction:column;height:auto;gap:1rem}
+  .slice{flex:none;min-height:25rem;cursor:default}
+  .slice > img{opacity:1;filter:none;height:55%}
+  .slice::after{opacity:1;background:linear-gradient(180deg,rgba(18,26,23,0) 25%,rgba(18,26,23,1) 55%)}
+  .slice-tab{display:none}
+  .slice-body{opacity:1;transform:none;pointer-events:auto}
+}
+
+/* scrub statement */
+.statement{padding-block:var(--chapter)}
+.statement p{font-size:clamp(1.7rem,3.9vw,3.4rem);line-height:1.16;letter-spacing:-.035em;font-weight:560;max-width:62rem}
+
+/* rates */
+.rates{background:var(--navy);color:#fff;position:relative}
+.rates::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 85% 0%,rgba(31,61,224,.55),transparent 70%),radial-gradient(40% 40% at 0% 100%,rgba(242,194,48,.14),transparent 70%);pointer-events:none}
+.rates .wrap{position:relative}
+.rates .head p{color:rgba(255,255,255,.72)}
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-flow:dense;gap:.9rem}
+.rate{border-radius:22px;padding:clamp(1.5rem,2.6vw,2.4rem);display:flex;flex-direction:column;min-height:21rem;transition:transform .7s ease-out}
+.rate:hover{transform:translateY(-6px)}
+.rate.w7{grid-column:span 7}.rate.w5{grid-column:span 5}
+.rate h3{font-size:1.2rem;font-weight:600;letter-spacing:-.015em;max-width:22rem;line-height:1.25}
+.rate .what{margin-top:.5rem;font-size:.98rem;opacity:.8;max-width:26rem}
+.price{margin-top:auto;padding-top:2rem;font-size:clamp(2.6rem,5.2vw,4.6rem);font-weight:640;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.price small{font-size:.32em;font-weight:560;letter-spacing:-.01em;margin-right:.3em;vertical-align:.9em}
+.founder{margin-top:1rem;padding-top:1rem;border-top:1px solid currentColor;font-size:.98rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-color:rgba(127,127,127,.35)}
+.founder b{font-weight:650;font-variant-numeric:tabular-nums}
+.rate.maize{background:var(--maize);color:var(--ink)}
+.rate.cobalt{background:var(--cobalt)}
+.rate.paper{background:var(--paper);color:var(--ink)}
+.rate.outline{border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.04)}
+.rates-note{margin-top:2rem;color:rgba(255,255,255,.72);max-width:44rem}
+@media (max-width:860px){.rate.w7,.rate.w5{grid-column:span 12}.rate{min-height:17rem}}
+
+/* founder pin */
+.pin-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2rem,6vw,6rem);align-items:start}
+.pin-left h2{font-size:clamp(2rem,4.2vw,3.75rem);line-height:1.05;letter-spacing:-.04em;font-weight:620}
+.pin-left p{margin-top:1.25rem;color:var(--ink-soft);max-width:26rem}
+.pin-left .btn{margin-top:2rem}
+.terms{display:flex;flex-direction:column;gap:1.25rem}
+.term{background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(1.5rem,3vw,2.75rem);transform-origin:center top}
+.term h3{font-size:clamp(1.35rem,2.2vw,1.9rem);letter-spacing:-.03em;line-height:1.15;font-weight:620}
+.term p{margin-top:.75rem;color:var(--ink-soft);max-width:34rem}
+.term.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.term.dark p{color:rgba(236,238,232,.75)}
+table.swap{width:100%;border-collapse:collapse;margin-top:1.25rem;font-variant-numeric:tabular-nums}
+.swap th{font-weight:550;font-size:.9rem;color:var(--ink-soft);text-align:left;padding:.5rem 0;border-bottom:1px solid var(--line)}
+.swap td{padding:.9rem 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+.swap td:nth-child(n+2),.swap th:nth-child(n+2){text-align:right;white-space:nowrap;padding-left:1rem}
+.swap s{color:var(--ink-soft)}
+.swap td:last-child{font-weight:650;font-size:1.15rem}
+.swap tr:last-child td{border-bottom:0}
+.swap .off td{color:var(--ink-soft);font-weight:400;font-size:1rem}
+@media (max-width:860px){.pin-grid{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--cobalt);color:#fff;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;right:-12vw;bottom:-22vw;width:55vw;height:55vw;border-radius:50%;background:radial-gradient(closest-side,rgba(242,194,48,.5),transparent 70%);pointer-events:none}
+.contact .wrap{position:relative}
+.contact h2{font-size:clamp(2.6rem,8.2vw,8rem);line-height:.96;letter-spacing:-.055em;font-weight:640;max-width:14ch}
+.contact p{margin-top:1.75rem;font-size:clamp(1.1rem,1.5vw,1.3rem);max-width:34rem;color:rgba(255,255,255,.88)}
+.contact .hero-actions{margin-top:2.5rem}
+footer{background:var(--ink);color:rgba(236,238,232,.7);padding-block:2.5rem;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem}
+footer a{text-decoration:none;color:var(--paper)}
+footer a:hover{text-decoration:underline;text-underline-offset:4px}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.slice,.slice > img,.slice-body,.btn,.rate{transition:none}}
+</style>
+</head>
+<body>
+<header class="nav" aria-label="Primary">
+  <a class="nav-name" href="#top">George Ndirangu</a>
+  <a class="link" href="#work">Work</a>
+  <a class="link" href="#rates">Rates</a>
+  <a class="link" href="#founder">Technical founder</a>
+  <a class="cta" href="#contact">Start a build</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap wide">
+      <h1 aria-label="I build your app, its website and the backend behind them.">
+        <span class="line" aria-hidden="true"><span>I build your app, <i class="pill" style="background-image:url(assets/parzo.jpg)"></i> its website</span></span>
+        <span class="line" aria-hidden="true"><span>and the backend <i class="pill" style="background-image:url(assets/imani.jpg)"></i> behind them.</span></span>
+      </h1>
+      <div class="hero-split">
+        <div class="hero-copy">
+          <p><strong>I'm George Ndirangu, a full stack developer in Kenya.</strong> Six of my products are live today, from a carpool app to a record book for chamas. I can build yours for a fixed price.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#rates">See the rates</a>
+            <a class="btn btn-quiet" href="#work">Look at the work</a>
+          </div>
+        </div>
+        <div class="fan" aria-hidden="true">
+          <div class="frame f1"><img src="assets/chamaclub.jpg" alt="" width="1280" height="800"></div>
+          <div class="frame f2"><img src="assets/mamafua.jpg" alt="" width="1280" height="800"></div>
+          <div class="frame f3"><img src="assets/workryde.jpg" alt="" width="1280" height="800"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>mamafua.co.ke</span><span>workryde.com</span><span>parzoapp.com</span><span>chamaclub.com</span><span>kenyantesters.com</span><span>imanievents.com</span>
+    </div>
+  </div>
+
+  <section class="chapter" id="work">
+    <div class="wrap">
+      <div class="head">
+        <h2>Six products, all live, all built end to end.</h2>
+        <p>Each one is a real business with real users. Open a panel to see what it does and which parts I built.</p>
+      </div>
+      <div class="slices">
+        <article class="slice is-open">
+          <img src="assets/mamafua.jpg" alt="MamaFua home page" loading="lazy">
+          <button class="slice-tab" aria-label="Show MamaFua"><span>MamaFua</span></button>
+          <div class="slice-body">
+            <h3>MamaFua</h3>
+            <p>Home services booking across Kenya. Customers book verified cleaners, plumbers, electricians and nannies, pay a deposit and track the job.</p>
+            <ul class="built"><li>Website</li><li>Customer app</li><li>Business app</li><li>Backend</li></ul>
+            <a class="visit" href="https://mamafua.co.ke" target="_blank" rel="noopener">Visit mamafua.co.ke</a>
+          </div>
+        </article>
+        <article class="slice">
+          <img src="assets/workryde.jpg" alt="WorkRyde home page" loading="lazy">
+          <button class="slice-tab" aria-label="Show WorkRyde"><span>WorkRyde</span></button>
+          <div class="slice-body">
+            <h3>WorkRyde</h3>
+            <p>Carpooling for people with a verified work email. Drivers share the stops on their commute. Riders book a seat and pay from an in-app wallet.</p>
+            <ul class="built"><li>Website</li><li>App</li><li>Backend</li></ul>
+            <a class="visit" href="https://workryde.com" target="_blank" rel="noopener">Visit workryde.com</a>
+          </div>
+        </article>
+        <article class="slice">
+          <img src="assets/parzo.jpg" alt="Parzo home page" loading="lazy">
+          <button class="slice-tab" aria-label="Show Parzo"><span>Parzo</span></button>
+          <div class="slice-body">
+            <h3>Parzo</h3>
+            <p>A cost-sharing marketplace. Hosts list slots on memberships, bulk orders and imports. Parzo holds the payment until delivery is confirmed.</p>
+            <ul class="built"><li>Website</li><li>App</li><li>Backend</li></ul>
+            <a class="visit" href="https://parzoapp.com" target="_blank" rel="noopener">Visit parzoapp.com</a>
+          </div>
+        </article>
+        <article class="slice">
+          <img src="assets/chamaclub.jpg" alt="ChamaClub home page" loading="lazy">
+          <button class="slice-tab" aria-label="Show ChamaClub"><span>ChamaClub</span></button>
+          <div class="slice-body">
+            <h3>ChamaClub</h3>
+            <p>One shared record for a savings group: contributions, loans, investments, meetings and votes, with roles for each member.</p>
+            <ul class="built"><li>Website</li><li>App</li><li>Member portal</li><li>Backend</li></ul>
+            <a class="visit" href="https://chamaclub.com" target="_blank" rel="noopener">Visit chamaclub.com</a>
+          </div>
+        </article>
+        <article class="slice">
+          <img src="assets/kenyantesters.jpg" alt="Kenyan Testers home page" loading="lazy">
+          <button class="slice-tab" aria-label="Show Kenyan Testers"><span>Kenyan Testers</span></button>
+          <div class="slice-body">
+            <h3>Kenyan Testers</h3>
+            <p>Testers in Kenya check your app or website on real devices. You get a report with the steps, the device and screenshots, and you pay by M-Pesa.</p>
+            <ul class="built"><li>Website</li><li>Backend</li></ul>
+            <a class="visit" href="https://kenyantesters.com" target="_blank" rel="noopener">Visit kenyantesters.com</a>
+          </div>
+        </article>
+        <article class="slice">
+          <img src="assets/imani.jpg" alt="Imani Events home page" loading="lazy">
+          <button class="slice-tab" aria-label="Show Imani Events"><span>Imani Events</span></button>
+          <div class="slice-body">
+            <h3>Imani Events</h3>
+            <p>Event planning and decor in Nairobi, with an online catalogue that totals your picks before you send an enquiry.</p>
+            <ul class="built"><li>Website</li><li>Backend</li></ul>
+            <a class="visit" href="https://imanievents.com" target="_blank" rel="noopener">Visit imanievents.com</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement">
+    <div class="wrap">
+      <p class="scrub">Every app takes six months to build. I build with AI tools, which is why the price is this low. Most of what you pay goes to the AI subscriptions that make it possible.</p>
+    </div>
+  </section>
+
+  <section class="rates chapter" id="rates">
+    <div class="wrap">
+      <div class="head">
+        <h2>Four fixed prices. No hourly billing.</h2>
+        <p>Pick the package that matches what you need built. Prices are in Kenya shillings and cover the whole build.</p>
+      </div>
+      <div class="bento">
+        <article class="rate w7 maize">
+          <h3>Full stack app with a companion app</h3>
+          <p class="what">Two apps that work together, such as a driver app and a customer app, plus the backend they share.</p>
+          <div class="price"><small>Kshs</small>150,000</div>
+          <div class="founder"><span>As your technical founder</span><b>Kshs 125,000 plus equity</b></div>
+        </article>
+        <article class="rate w5 cobalt">
+          <h3>Full stack app</h3>
+          <p class="what">One app with its front end and its backend.</p>
+          <div class="price"><small>Kshs</small>100,000</div>
+          <div class="founder"><span>As your technical founder</span><b>Kshs 75,000 plus equity</b></div>
+        </article>
+        <article class="rate w5 paper">
+          <h3>Website and app</h3>
+          <p class="what">A website and an app, with no backend.</p>
+          <div class="price"><small>Kshs</small>80,000</div>
+          <div class="founder"><span>As your technical founder</span><b>Kshs 55,000 plus equity</b></div>
+        </article>
+        <article class="rate w7 outline">
+          <h3>Website with backend</h3>
+          <p class="what">A website with its own backend, like Kenyan Testers or Imani Events.</p>
+          <div class="price"><small>Kshs</small>50,000</div>
+          <div class="founder"><span>Technical founder option</span><b>Not available</b></div>
+        </article>
+      </div>
+      <p class="rates-note">Any build that includes an app takes six months. Your payment mainly funds the AI subscriptions I build with, which is what keeps these prices low.</p>
+    </div>
+  </section>
+
+  <section class="chapter" id="founder">
+    <div class="wrap pin-grid">
+      <div class="pin-left">
+        <h2>Pay less. Bring me in as your technical founder.</h2>
+        <p>If you would rather share ownership than pay the full price, I take equity in the product and the cash price drops.</p>
+        <a class="btn btn-primary" href="#contact">Talk about equity</a>
+      </div>
+      <div class="terms">
+        <article class="term">
+          <h3>Equity takes Kshs 25,000 off the price</h3>
+          <p>You give me a share of the product. In return, Kshs 25,000 comes off the package price.</p>
+          <table class="swap">
+            <thead><tr><th>Package</th><th>Cash only</th><th>With equity</th></tr></thead>
+            <tbody>
+              <tr><td>Full stack app with a companion app</td><td><s>150,000</s></td><td>125,000</td></tr>
+              <tr><td>Full stack app</td><td><s>100,000</s></td><td>75,000</td></tr>
+              <tr><td>Website and app</td><td><s>80,000</s></td><td>55,000</td></tr>
+              <tr class="off"><td>Website with backend</td><td>50,000</td><td>Not available</td></tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="term dark">
+          <h3>Equity never goes above 25%</h3>
+          <p>We agree the exact share before any work starts. The most I will take in any product is 25%.</p>
+        </article>
+        <article class="term">
+          <h3>Only for builds that include an app</h3>
+          <p>The three app packages qualify. A website on its own stays at the cash price.</p>
+        </article>
+        <article class="term">
+          <h3>The timeline does not change</h3>
+          <p>A founder build takes the same six months as a cash build.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact chapter" id="contact">
+    <div class="wrap">
+      <h2>Tell me what you want built.</h2>
+      <p>Send a short description of the app or website and which package fits. I will reply with questions and a start date.</p>
+      <div class="hero-actions">
+        <a class="btn btn-maize" href="mailto:sales@ujakazi.com?subject=App%20build%20enquiry">Email sales@ujakazi.com</a>
+        <a class="btn btn-ghost-light" href="https://github.com/Geozstevenzz" target="_blank" rel="noopener">Open my GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>George Ndirangu, full stack developer, Kenya</span>
+    <nav aria-label="Projects">
+      <a href="https://mamafua.co.ke">MamaFua</a><a href="https://workryde.com">WorkRyde</a><a href="https://parzoapp.com">Parzo</a><a href="https://chamaclub.com">ChamaClub</a><a href="https://kenyantesters.com">Kenyan Testers</a><a href="https://imanievents.com">Imani Events</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  // accordion: works without GSAP
+  var slices=[].slice.call(document.querySelectorAll('.slice'));
+  function open(s){slices.forEach(function(x){x.classList.toggle('is-open',x===s)})}
+  slices.forEach(function(s){
+    s.addEventListener('mouseenter',function(){if(window.matchMedia('(hover:hover) and (min-width:861px)').matches)open(s)});
+    s.addEventListener('click',function(){open(s)});
+    s.querySelector('.slice-tab').addEventListener('focus',function(){open(s)});
+  });
+
+  if(!window.gsap||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  // one orchestrated page-load moment
+  var tl=gsap.timeline({defaults:{ease:'power4.out'}});
+  tl.from('.hero h1 .line > span',{yPercent:110,duration:1.1,stagger:.12})
+    .from('.hero-copy > *',{y:24,opacity:0,duration:.8,stagger:.1},'-=.6')
+    .from('.frame',{y:80,opacity:0,rotate:0,duration:1.2,stagger:.12},'-=1');
+
+  // marquee
+  var track=document.querySelector('.marquee-track');
+  track.innerHTML+=track.innerHTML;
+  gsap.to(track,{xPercent:-50,duration:32,ease:'none',repeat:-1});
+
+  // scrubbing text reveal
+  var p=document.querySelector('.scrub');
+  p.setAttribute('aria-label',p.textContent);
+  p.innerHTML=p.textContent.split(' ').map(function(w){return '<span aria-hidden="true">'+w+'</span>'}).join(' ');
+  gsap.fromTo(p.children,{opacity:.1},{opacity:1,stagger:.1,ease:'none',scrollTrigger:{trigger:p,start:'top 80%',end:'bottom 45%',scrub:true}});
+
+  // pinned split with scale and fade on the scrolling terms
+  var mm=gsap.matchMedia();
+  mm.add('(min-width:861px)',function(){
+    ScrollTrigger.create({trigger:'.pin-grid',start:'top 110px',end:function(){return '+='+(document.querySelector('.terms').offsetHeight-document.querySelector('.pin-left').offsetHeight)},pin:'.pin-left',pinSpacing:false});
+    gsap.utils.toArray('.term').forEach(function(t){
+      gsap.fromTo(t,{scale:.88,opacity:.35},{scale:1,opacity:1,ease:'none',scrollTrigger:{trigger:t,start:'top 95%',end:'top 55%',scrub:true}});
+    });
+  });
+  window.addEventListener('load',function(){ScrollTrigger.refresh()});
+})();
+</script>
+</body>
+</html>
