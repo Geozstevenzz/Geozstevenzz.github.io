@@ -120,6 +120,21 @@ h1,h2,h3,p{margin:0}
   .slice-body{opacity:1;transform:none;pointer-events:auto}
 }
 
+/* play store proof */
+.proof{margin-top:clamp(3.5rem,7vw,6rem)}
+.proof-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:1.25rem 4rem;align-items:end;margin-bottom:clamp(1.75rem,3vw,2.75rem)}
+.proof-head h3{font-size:clamp(1.6rem,3vw,2.6rem);letter-spacing:-.035em;line-height:1.08;font-weight:620}
+.proof-head p{color:var(--ink-soft);max-width:28rem}
+.proof-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.listing{display:block;text-decoration:none;border-radius:20px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(12,20,64,.5)}
+.listing-shot{overflow:hidden;border-bottom:1px solid var(--line)}
+.listing-shot img{width:100%;height:auto;transition:transform .7s ease-out}
+.listing:hover .listing-shot img{transform:scale(1.03)}
+.listing-cap{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;padding:1.1rem 1.4rem}
+.listing-cap b{font-weight:620;letter-spacing:-.01em}
+.listing-cap span{color:var(--cobalt);font-weight:600;font-size:.95rem}
+@media (max-width:860px){.proof-head,.proof-grid{grid-template-columns:1fr}}
+
 /* stack */
 .stack{margin-top:clamp(3.5rem,7vw,6rem);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:2rem 4rem;border-top:1px solid var(--line);padding-top:clamp(2rem,4vw,3rem)}
 .stack h3{font-size:clamp(1.5rem,2.6vw,2.2rem);letter-spacing:-.035em;line-height:1.1;font-weight:620;max-width:16rem}
@@ -303,6 +318,22 @@ footer a:hover{text-decoration:underline;text-underline-offset:4px}
             <a class="visit" href="https://imanievents.com" target="_blank" rel="noopener">Visit imanievents.com</a>
           </div>
         </article>
+      </div>
+      <div class="proof">
+        <div class="proof-head">
+          <h3>More than 15,000 downloads on Google Play.</h3>
+          <p>MamaFua runs on two apps I built. These are their live Play Store listings, so you can check the numbers yourself.</p>
+        </div>
+        <div class="proof-grid">
+          <a class="listing" href="https://play.google.com/store/apps/details?id=com.mamafua.customer" target="_blank" rel="noopener">
+            <div class="listing-shot"><img src="assets/play-mamafua.jpg" alt="Google Play listing for MamaFua App showing 10K+ downloads" width="1600" height="975" loading="lazy"></div>
+            <div class="listing-cap"><b>MamaFua App, 10K+ downloads</b><span>Open on Google Play</span></div>
+          </a>
+          <a class="listing" href="https://play.google.com/store/apps/details?id=com.mamafua.vendor" target="_blank" rel="noopener">
+            <div class="listing-shot"><img src="assets/play-mamafua-business.jpg" alt="Google Play listing for Mama Fua Business showing 5K+ downloads" width="1600" height="975" loading="lazy"></div>
+            <div class="listing-cap"><b>Mama Fua Business, 5K+ downloads</b><span>Open on Google Play</span></div>
+          </a>
+        </div>
       </div>
       <div class="stack">
         <h3>The stack behind these six products</h3>
